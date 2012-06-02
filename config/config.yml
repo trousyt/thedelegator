@@ -1,0 +1,7 @@
+wolfram:
+  base_api_url: http://api.wolframalpha.com/v2/query
+  app_id: '8EUGXE-9QWQ662743'
+  
+twitter:
+  base_api_url: http://api.twitter.com/1/
+  handle: '@thedelegator12'

@@ -1,0 +1,36 @@
+<div class="row">
+	<header id="inputter" class="span7 offset1">
+		<h1>The Wolfram Delegator</h1>
+		<div id="input-elements" class="row">
+			<%= form_tag('/wolfram/query', :method => :get) do %>
+				<%= text_field_tag(:input, nil, :size => 120, :id => 'input') %>
+				<%= submit_tag 'Crunch!', :id => 'submit', :class => 'btn btn-primary', :onClick => 'return false;' %>
+			<% end %>
+		</div>
+		<div class="row">
+			<div class="span7">
+				<span id="status"></span>
+				<div id="notice" class="alert alert-info"><strong>Hello there!</strong> What do you want to search for?</div>
+			</div>
+		</div>
+	</header>
+	<header class="span3 results-bar">
+		<div id="last10-container">
+		</div>
+	</header>
+</div>
+<div class="row">
+	<div id="response" class="span6 offset2"></div>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Initialize fancybox elements
+		$('.fancybox').fancybox();
+		
+		// Init the QueryMe object.
+		QueryMe.init();
+		QueryMe.last_ten();
+	});
+</script>

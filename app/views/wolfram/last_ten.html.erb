@@ -1,0 +1,14 @@
+<div id="last10">	
+	<h2><em>Last 10 Queries<em></h2>
+	<% if @last_ten.count > 0 %>
+		<% @last_ten.each_with_index do |query, n| %>
+			<div>
+				<%= raw "#{n+1}. #{query.input} <a class='fancybox' href='#response_#{n+1}' title='Query for #{query.input}'>View Results</a><div id='response_#{n+1}' class='noshow results'>#{query.response}</div>" %>
+			</div>
+		<% end %>
+	<% else %>
+		<div>
+			<em>Sorry, there have been no queries yet...</em>
+		</div>
+	<% end %>
+</div>

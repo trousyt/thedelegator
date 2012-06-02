@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wolfram</title>
+  <%= stylesheet_link_tag "application" %>
+	<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700,400italic' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="content container-fluid">
+	<div id="site-header" class="row">
+		<div class="span1 offset3">
+			<div id="network-head"></div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span12">
+				<%= yield %>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="credit" class="span10 offset1"></div>
+	</div>
+</body>
+</html>

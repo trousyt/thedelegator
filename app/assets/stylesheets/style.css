@@ -1,0 +1,72 @@
+body {
+	padding-bottom: 60px;
+}
+
+
+h1 {
+	padding-bottom: 20px;
+	font-family: 'Old Standard TT', serif;
+	font-size: 3em;
+	color: #000;
+}
+
+#last10-container h2 {
+	font-family: 'Old Standard TT', serif;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+#site-header {
+		background: url('/images/layout_background.png');
+		margin-bottom: 40px;
+}
+
+#network-head {
+	margin: 0 auto;
+	padding-bottom: 20px;
+	background: url('/images/layout_top-banner.png') no-repeat;
+	width: 264px;
+	height: 206px;
+}
+
+#inputter {
+	background: url("/images/layout_search-header-box.png") no-repeat;
+	height: 235px;
+	padding-top: 40px;
+	padding-left: 70px;
+	margin-bottom: 20px;
+}
+
+#inputter #input {
+	margin-top: 9px;
+	width: 400px;
+}
+
+#inputter #input-elements {
+	height: 50px;
+}
+
+#notice {
+	display: inline-block;
+	width: 50%;
+}
+
+#response {
+	background-color: #fff;
+}
+
+.results {
+	padding: 10px;
+	background-color: #fff;
+	width: 510px;
+	min-height: 100px;
+}
+
+.results img, #response img {
+	display: block;
+	padding-bottom: 5px;
+}
+
+.noshow {
+	display: none;
+}
