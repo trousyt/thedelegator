@@ -1,7 +1,0 @@
-Wolfram Delegator
-==
-
-Wofram Delegator is a simple experimental web application that utilizes the basic capabilities of the WolframAlpha API. 
-
-It simply takes user input, calls the WolframAlpha API with that input and displays for the user the result we get back.
-
