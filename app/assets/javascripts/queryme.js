@@ -37,17 +37,20 @@ var QueryMe = QueryMe || {
 			
 			// Run AJAX.load
 			var that = this;
-			$(this.response_element).load('/wolfram/query/' + input, function() {
+			$(this.response_element).load('/wolfram/query/' + input, function(response, status, xhr) {
 				// Fade in the new result and stop the loading glyph
 				if (that.has_run) { $(that.response_element).fadeIn('slow'); }
 				$(that.status_element).html('');
-				that.has_run = true;
 				
-				// Show a success notice.
-				that.show_notice('<strong>Voila!</strong> It was a pleasure to serve you.', 'success');
-				
-				// Get a new last-10 list.
-				that.last_ten();
+				if (status == 'success') {
+					that.has_run = true;
+					
+					// Show a success notice.
+					that.show_notice('<strong>Voila!</strong> It was a pleasure to serve you.', 'success');
+					
+					// Get a new last-10 list.
+					that.last_ten();
+				}
 			});
 		}
 	},
